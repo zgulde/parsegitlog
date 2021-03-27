@@ -1,0 +1,15 @@
+.idea/
+*.iml
+*.log
+dist/
+build/
+parsegitlog.egg-info/
+__pycache__
+index.html
+public
+.ipynb_checkpoints
+Untitled.ipynb
+.pytype/
+.mypy_cache
+.make
+
