@@ -5,7 +5,7 @@ import argparse
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="python -m parsegitlog")
-    parser.add_argument("repo_path")
+    parser.add_argument("repo_path", default=".")
     parser.add_argument("-i", "--indent", type=int, default=2)
     args = parser.parse_args()
 
