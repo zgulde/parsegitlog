@@ -1,4 +1,4 @@
-from gitlog import parse_commit, parse_shortstat
+from parsegitlog.gitlog import parse_commit, parse_shortstat
 
 shortstat_cases = [
     (

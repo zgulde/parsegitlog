@@ -1,7 +1,8 @@
-import json
-from parsegitlog.gitlog import get_commits
-import sys
 import argparse
+import json
+import sys
+
+from parsegitlog.gitlog import get_commits
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="python -m parsegitlog")
