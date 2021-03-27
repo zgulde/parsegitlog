@@ -1,7 +1,3 @@
-"""
-TODO: parse with --shortstat
-"""
-import json
 import re
 from subprocess import check_output
 
@@ -73,10 +69,3 @@ def get_commits(repo_path="."):
     commits = commits[1:]
     output = [parse_commit(commit) for commit in commits]
     return output
-
-
-if __name__ == "__main__":
-    import sys
-
-    output = get_commits(sys.argv[1])
-    print(json.dumps(output, indent=2))
