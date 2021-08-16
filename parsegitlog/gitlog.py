@@ -69,3 +69,12 @@ def get_commits(repo_path="."):
     commits = commits[1:]
     output = [parse_commit(commit) for commit in commits]
     return output
+
+
+def get_commits_df(repo_path="."):
+    import pandas as pd
+
+    df = pd.DataFrame(get_commits(repo_path))
+    df.committed_at = pd.to_datetime(df.committed_at)
+    df.authored_at = pd.to_datetime(df.authored_at)
+    return df

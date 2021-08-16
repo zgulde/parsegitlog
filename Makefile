@@ -9,14 +9,14 @@ setup: ## Install development deps
 
 .PHONY: clean
 clean: ## Remove built docs and packaging artifacts
-	rm -rf dist build zgulde.egg-info public
+	rm -rf dist build parsegitlog.egg-info public
 	rm -f index.html
 	rm -rf .make .mypy_cache .pytest_cache .pytype
 
 .PHONY: release
-release: fmt test check-types gh-pages ## Release a new version to pypi
-	python3 setup.py sdist bdist_wheel
-	python3 -m twine upload dist/*
+release: fmt test check-types ## Release a new version to pypi
+	python setup.py sdist bdist_wheel
+	python -m twine upload dist/*
 
 PY_FILES := $(shell find parsegitlog -name \*.py)
 

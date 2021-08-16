@@ -5,7 +5,7 @@ with open("readme.md", "r") as fh:
 
 setuptools.setup(
     name="parsegitlog",
-    version="0.0.1",
+    version="0.0.3",
     author="Zach Gulde",
     author_email="zachgulde@gmail.com",
     description="Get a representation of commits in a git repository as JSON",
