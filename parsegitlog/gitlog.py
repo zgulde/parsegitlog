@@ -72,9 +72,10 @@ def get_commits(repo_path="."):
 
 
 def get_commits_df(repo_path="."):
+    'Get commits for a repo as a pandas dataframe'
     import pandas as pd
 
     df = pd.DataFrame(get_commits(repo_path))
-    df.committed_at = pd.to_datetime(df.committed_at)
-    df.authored_at = pd.to_datetime(df.authored_at)
+    df.committed_at = pd.to_datetime(df.committed_at, utc=True)
+    df.authored_at = pd.to_datetime(df.authored_at, utc=True)
     return df

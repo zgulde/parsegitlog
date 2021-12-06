@@ -46,6 +46,9 @@ get_commits(repo_path)
 `get_commits` will return a list of dicts, each dict representing a single
 commit from the repository.
 
+There is also a `get_commits_df` function that will return the commits as a
+pandas dataframe (assumes pandas is available.)
+
 ## Gotchas
 
 **_Merge commits will show up multiple times._** This is intended behavior.
